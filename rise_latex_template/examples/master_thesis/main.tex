@@ -1,0 +1,128 @@
+
+%% RiSE's latex template for thesis and dissertations
+%% Version 0.2
+%% (c) 2008 Yguaratã Cerqueira Cavalcanti (yguarata@gmail.com)
+%%			Vinicius Cardoso Garcia (vinicius.garcia@gmail.com)
+%%
+%%          Thanks to RiSE's reasearchers contributions.
+%%
+%% This document is based on UFPEThesis template, from Paulo Gustavo S. Fonseca.
+%%
+%%
+%% Options:
+%%         * Idiom
+%%           pt   - Portguese (default)
+%%           en   - English
+%%
+%%         * Text type
+%%           bsc  - B.Sc. Thesis
+%%           msc  - M.Sc. Thesis (default)
+%%           qual - PHD qualification
+%%           prop - PHD proposal
+%%           phd  - PHD thsis
+%%
+%%         * Media
+%%           scr  - to eletronic version (PDF) / see the users guide
+%%
+%%
+%%         * Pagination
+%%           oneside - unique face press
+%%           twoside - two faces press
+%%
+%% Reference commands. Use the following commands to make references in your
+%% text:
+%%			\figref  -- for Figure reference
+%% 			\tabref  -- for Table reference
+%% 			\eqnref  -- for equation reference
+%% 			\chapref -- for chapter reference
+%% 			\secref  -- for section reference
+%% 			\appref  -- for appendix reference
+%% 			\axiref  -- for axiom reference
+%% 			\conjref -- for conjecture reference
+%% 			\defref  -- for definition reference
+%% 			\lemref  -- for lemma reference
+%% 			\theoref -- for theorem reference
+%% 			\corref  -- for corollary reference
+%% 			\propref -- for proprosition reference
+%% 			\pgref   -- for page reference
+%%
+%%			Example: See \chapref{chap:introduction}
+
+\documentclass[en,oneside]{risethesis}
+
+\usepackage{natbib}
+\usepackage{babel}
+\usepackage{supertabular}
+\usepackage{fancybox}
+\usepackage{acronym}
+\usepackage[linkcolor=blue,citecolor=blue,urlcolor=blue,colorlinks,pdfpagelabels,pdftitle={ycc-msc},pdfauthor={Yguaratã
+Cerqueira Cavalcanti}]{hyperref}
+
+\address{RECIFE}
+\department{Centro de Informática}
+\program{Pós-graduação em Ciência da Computação}
+\majorfield{Ciência da Computação}
+\title{A Bug Report Analysis and Search Tool}
+\date{JULY/2009}
+\author{Yguaratã Cerqueira Cavalcanti}
+\adviser{Silvio Romero de Lemos Meira}
+\coadviser{Eduardo Santana de Almeida}
+
+\begin{document}
+
+\frontmatter
+\frontpage
+\presentationpage
+
+\begin{dedicatory}    
+I dedicate this dissertation to myself and all my family, friends and professors
+who gave me all necessary support to get here.
+\end{dedicatory}
+
+\acknowledgements
+I would like to thank and dedicate this dissertation to the following people:
+\ldots
+
+\begin{epigraph}[Open My Eyes]{S.o.ja.}
+I open my eyes each morning I rise, to find a true\\
+thought, know that it's real, I'm lucky to breathe,\\
+I'm lucky to feel, I'm glad to wake up, I'm glad to be\\
+here, with all of this world, and all of it's pain, all\\
+of it's lies, and all of it's flipped down, I still\\
+feel a sense of freedom, so glad I'm around,\\
+\vspace{0.5cm}
+It's my freedom, can't take it from me, i know it, it\\
+won't change, but we need some understanding, I know\\
+we'll be all right.
+\end{epigraph}
+
+\resumo
+\input{resumo}
+
+\abstract
+\input{abstract}
+
+\tableofcontents
+\listoffigures
+\listoftables
+\mainmatter
+
+% Acronyms
+\input{acronyms}
+
+\include{chapters/introduction/main}
+
+\backmatter
+
+\bibliographystyle{natbib}
+\addcontentsline{toc}{chapter}{Bibliography}
+\bibliography{references}
+
+% Appendix
+\clearpage
+\addappheadtotoc
+\appendix
+\appendixpage
+\include{appendix/experiment-instruments}
+
+\end{document}
