@@ -148,6 +148,7 @@
   \gdef\@sectionname{Seção}
   \gdef\@appendixname{Apêndice}
   \gdef\@pagename{página}
+  \gdef\@listacronymname{Acrônimos}
   \gdef\@colophontext{%
   \urlstyle{rm}%
   Este volume foi tipografado em \LaTeX\ na classe \textsf{UFPEThesis}
@@ -175,6 +176,7 @@
   \gdef\@sectionname{Section}
   \gdef\@appendixname{Appendix}
   \gdef\@pagename{page}
+  \gdef\@listacronymname{Acronyms}
   \gdef\@colophontext{%
   \urlstyle{rm}%
   This volume has been typeset in \LaTeX with the \textsf{UFPEThesis} class
@@ -530,10 +532,12 @@ fulfillment of the requirements for the degree of M.Sc. in Computer Science.
 
 \renewcommand\listoffigures{%
    \chapter*{\listfigurename}
+   \addcontentsline{toc}{chapter}{\listfigurename}
    \@starttoc{lof}}
 
 \renewcommand\listoftables{%
    \chapter*{\listtablename}
+   \addcontentsline{toc}{chapter}{\listtablename}
    \@starttoc{lot}}
 
 
