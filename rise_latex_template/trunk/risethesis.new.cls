@@ -110,14 +110,14 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %% Language Independent
-% \gdef\@bachelordissertation{Trabalho de Graduação}
-% \gdef\@mastersdissertation{Dissertação de Mestrado}
-% \gdef\@phdqualifying{Monografia de Qualificação}
-% \gdef\@phdproposal{Proposta de Tese de Doutorado}
-% \gdef\@phdthesis{Tese de Doutorado}
-% \gdef\@bachelordegree{Bacharel}
-% \gdef\@mastersdegree{Mestre}
-% \gdef\@phddegree{Doutor}
+\gdef\@bachelordissertation{Trabalho de Graduação}
+\gdef\@mastersdissertation{Dissertação de Mestrado}
+\gdef\@phdqualifying{Monografia de Qualificação}
+\gdef\@phdproposal{Proposta de Tese de Doutorado}
+\gdef\@phdthesis{Tese de Doutorado}
+\gdef\@bachelordegree{Bacharel}
+\gdef\@mastersdegree{Mestre}
+\gdef\@phddegree{Doutor}
 \gdef\resumoname{Resumo} \gdef\abstrname{Abstract}
 \gdef\keywordsnamePT{Palavras-chave}
 \gdef\keywordsnameEN{Keywords}
@@ -126,14 +126,6 @@
 
 % Portuguese
 \if\@language0
-  \gdef\@bachelordissertation{Trabalho de Graduação}
-  \gdef\@mastersdissertation{Dissertação de Mestrado}
-  \gdef\@phdqualifying{Monografia de Qualificação}
-  \gdef\@phdproposal{Proposta de Tese de Doutorado}
-  \gdef\@phdthesis{Tese de Doutorado}
-  \gdef\@bachelordegree{Bacharel}
-  \gdef\@mastersdegree{Mestre}
-  \gdef\@phddegree{Doutor}
   \gdef\@maleadvisertitle{Orientador}
   \gdef\@femaleadvisertitle{Orientadora}
   \gdef\@malecoadvisertitle{Co-Orientador}
@@ -159,21 +151,13 @@
   \gdef\@listacronymname{Acrônimos}
   \gdef\@colophontext{%
   \urlstyle{rm}%
-  Este volume foi tipografado em \LaTeX\ na classe \textsf{RiSEThesis}
-  (\url{http://risetemplate.sourceforge.net}).
+  Este volume foi tipografado em \LaTeX\ na classe \textsf{UFPEThesis}
+  (\url{www.cin.ufpe.br/~paguso/ufpethesis}).
   \if\@scr1
   Para detalhes sobre este documento, clique \Acrobatmenu{GeneralInfo}{aqui}.
   \fi}
 % English
   \else\if\@language1
-  \gdef\@bachelordissertation{B.Sc. Dissertation}
-  \gdef\@mastersdissertation{M.Sc. Dissertation}
-  \gdef\@phdqualifying{Ph.D. Thesis Qualification}
-  \gdef\@phdproposal{Ph.D. Proposal}
-  \gdef\@phdthesis{Ph.D. Thesis}
-  \gdef\@bachelordegree{Bachelor}
-  \gdef\@mastersdegree{Master of Science}
-  \gdef\@phddegree{Philosophy Doctor}
   \gdef\@maleadvisertitle{Advisor}
   \gdef\@femaleadvisertitle{Advisor}
   \gdef\@malecoadvisertitle{Co-Advisor}
@@ -213,47 +197,29 @@
 
 %% School identification
 
-\def\universitypt#1{%
-  \gdef\@universitypt{#1}}
-\def\@universitypt{Universidade Federal de Pernambuco}
-
-\def\universityen#1{%
-  \gdef\@universityen{#1}}
-\def\@universityen{Federal University of Pernambuco}
+\def\university#1{%
+  \gdef\@university{#1}}
+\def\@university{Universidade Federal de Pernambuco}
 
 \def\universitylogo{ufpelogo.tex}
 
 \let\@showinstitute=0
-\def\institutept#1{%
-  \let\@showinstitutept=1
-  \gdef\@institutept{#1}}
-\def\instituteen#1{%
-  \let\@showinstituteen=1
-  \gdef\@instituteen{#1}}
+\def\institute#1{%
+  \let\@showinstitute=1
+  \gdef\@institute{#1}}
 
 \let\@showdepartment=0
-\def\departmentpt#1{%
+\def\department#1{%
   \let\@showdepartment=1
-  \gdef\@departmentpt{#1}}
-\def\departmenten#1{%
-  \let\@showdepartment=1
-  \gdef\@departmenten{#1}}
+  \gdef\@department{#1}}
 
-\def\programpt#1{%
-  \gdef\@programpt{#1}}
-\def\@programpt{\@notdefined}
+\def\program#1{%
+  \gdef\@program{#1}}
+\def\@program{\@notdefined}
 
-\def\programen#1{%
-  \gdef\@programen{#1}}
-\def\@programen{\@notdefined}
-
-\def\majorfieldpt#1{%
-  \gdef\@majorfieldpt{#1}}
-\def\@majorfieldpt{\@notdefined}
-
-\def\majorfielden#1{%
-  \gdef\@majorfielden{#1}}
-\def\@majorfielden{\@notdefined}
+\def\majorfield#1{%
+  \gdef\@majorfield{#1}}
+\def\@majorfield{\@notdefined}
 
 \def\address#1{%
   \gdef\@address{#1}}
@@ -328,19 +294,14 @@
 
 
 \gdef\@presentationtext{%
-\if\@language0
 Trabalho apresentado ao Programa de
-\@programpt\ do \if\@showdepartment1\@departmentpt\ \else\@institutept\ \fi
-da \@universitypt\ como requisito parcial para obtenção do
-grau de \@degree\ em \@majorfieldpt.
-\fi
-\if\@language1 %If language is English
-% \vskip\baselineskip
-% \vskip\baselineskip
-A \@texttype{} presented to the \if\@showdepartment1\@departmenten\
-\else\@instituteen\ \fi of \@universityen\ in partial fulfillment of the
-requirements for the degree of \@degree\ in \@majorfielden.
-\fi
+\@program\ do \if\@showdepartment1\@department\ \else\@institute\ \fi
+da \@university\ como requisito parcial para obtenção do
+grau de \@degree\ em \@majorfield.
+\vskip\baselineskip
+\vskip\baselineskip
+A \@texttype{} presented to the Federal University of Pernambuco in partial
+fulfillment of the requirements for the degree of M.Sc. in Computer Science.
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -348,12 +309,13 @@ requirements for the degree of \@degree\ in \@majorfielden.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \setlength{\topmargin}{0mm}
-\setlength{\textheight}{\paperheight-\headheight-\headsep-\footskip-2in}
 \setlength{\oddsidemargin}{0mm}
 \setlength{\evensidemargin}{0mm}
 \setlength{\marginparwidth}{0mm}
 \setlength{\marginparsep}{0mm}
-\setlength{\textwidth}{\paperwidth-2.45in}
+\setlength{\textheight}{9in}
+\setlength{\textwidth}{6.25in}
+\setlength{\headheight}{16pt}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -398,11 +360,7 @@ requirements for the degree of \@degree\ in \@majorfielden.
   %\if\@showdepartment1\\
   %\@department\fi
   %} \\
-  \if\@language0
-    {\fontfamily{times}\selectfont \tiny \@universitypt\\}
-  \else
-    {\fontfamily{times}\selectfont \tiny \@universityen\\}
-  \fi
+  {\fontfamily{times}\selectfont \tiny \@university\\}
   {\fontfamily{times}\selectfont \tiny posgraduacao@cin.ufpe.br\\}
   {\fontfamily{times}\selectfont \tiny \url{www.cin.ufpe.br/~posgraduacao}\\}
   \vskip\baselineskip
@@ -427,35 +385,19 @@ requirements for the degree of \@degree\ in \@majorfielden.
 	\hspace{0.2cm}
 	\begin{minipage}[b]{16cm}
 	  {
-		  \if\@language0
-    		  \sf\Large
-    		  \@universitypt
-    		  \vskip 0.1cm
-    		  \if\@showinstitute1
-              \\
-    		    \@institutept
-    		    \vskip 0.1cm
-    		  \fi
-    		  \if\@showdepartment1
-    		    \@departmentpt
-    		    \vskip 0.1cm
-    		  \fi
-    		  \@programpt
-    	  \else
-    	      \sf\Large
-              \@universityen
-              \vskip 0.1cm
-              \if\@showinstitute1
-              \\
-                \@instituteen
-                \vskip 0.1cm
-              \fi
-              \if\@showdepartment1
-                \@departmenten
-                \vskip 0.1cm
-              \fi
-              \@programen
-    	  \fi
+		  \sf\Large
+		  \@university
+		  \vskip 0.1cm
+		  \if\@showinstitute1
+          \\
+		    \@institute
+		    \vskip 0.1cm
+		  \fi
+		  \if\@showdepartment1
+		    \@department
+		    \vskip 0.1cm
+		  \fi
+		  \@program
 	  }
 	\end{minipage}
 	\end{figure}

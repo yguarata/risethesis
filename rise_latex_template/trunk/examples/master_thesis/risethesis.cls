@@ -110,18 +110,14 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %% Language Independent
-\gdef\@maleadvisertitle{Advisor}
-\gdef\@femaleadvisertitle{Advisor}
-\gdef\@malecoadvisertitle{Co-Advisor}
-\gdef\@femalecoadvisertitle{Co-Advisor}
-\gdef\@bachelordissertation{Trabalho de Graduação}
-\gdef\@mastersdissertation{M.Sc. Dissertation}
-\gdef\@phdqualifying{Monografia de Qualificação}
-\gdef\@phdproposal{Proposta de Tese de Doutorado}
-\gdef\@phdthesis{Tese de Doutorado}
-\gdef\@bachelordegree{Bacharel}
-\gdef\@mastersdegree{Mestre}
-\gdef\@phddegree{Doutor}
+% \gdef\@bachelordissertation{Trabalho de Graduação}
+% \gdef\@mastersdissertation{Dissertação de Mestrado}
+% \gdef\@phdqualifying{Monografia de Qualificação}
+% \gdef\@phdproposal{Proposta de Tese de Doutorado}
+% \gdef\@phdthesis{Tese de Doutorado}
+% \gdef\@bachelordegree{Bacharel}
+% \gdef\@mastersdegree{Mestre}
+% \gdef\@phddegree{Doutor}
 \gdef\resumoname{Resumo} \gdef\abstrname{Abstract}
 \gdef\keywordsnamePT{Palavras-chave}
 \gdef\keywordsnameEN{Keywords}
@@ -130,6 +126,18 @@
 
 % Portuguese
 \if\@language0
+  \gdef\@bachelordissertation{Trabalho de Graduação}
+  \gdef\@mastersdissertation{Dissertação de Mestrado}
+  \gdef\@phdqualifying{Monografia de Qualificação}
+  \gdef\@phdproposal{Proposta de Tese de Doutorado}
+  \gdef\@phdthesis{Tese de Doutorado}
+  \gdef\@bachelordegree{Bacharel}
+  \gdef\@mastersdegree{Mestre}
+  \gdef\@phddegree{Doutor}
+  \gdef\@maleadvisertitle{Orientador}
+  \gdef\@femaleadvisertitle{Orientadora}
+  \gdef\@malecoadvisertitle{Co-Orientador}
+  \gdef\@femalecoadvisertitle{Co-Orientadora}
   \gdef\@notdefined{NÃO DEFINIDO}
   \gdef\acknowledgementsname{Agradecimentos}
   \gdef\@axiomname{Axioma}
@@ -151,13 +159,25 @@
   \gdef\@listacronymname{Acrônimos}
   \gdef\@colophontext{%
   \urlstyle{rm}%
-  Este volume foi tipografado em \LaTeX\ na classe \textsf{UFPEThesis}
-  (\url{www.cin.ufpe.br/~paguso/ufpethesis}).
+  Este volume foi tipografado em \LaTeX\ na classe \textsf{RiSEThesis}
+  (\url{http://risetemplate.sourceforge.net}).
   \if\@scr1
   Para detalhes sobre este documento, clique \Acrobatmenu{GeneralInfo}{aqui}.
   \fi}
 % English
-\else\if\@language1
+  \else\if\@language1
+  \gdef\@bachelordissertation{B.Sc. Dissertation}
+  \gdef\@mastersdissertation{M.Sc. Dissertation}
+  \gdef\@phdqualifying{Ph.D. Thesis Qualification}
+  \gdef\@phdproposal{Ph.D. Proposal}
+  \gdef\@phdthesis{Ph.D. Thesis}
+  \gdef\@bachelordegree{Bachelor}
+  \gdef\@mastersdegree{Master of Science}
+  \gdef\@phddegree{Philosophy Doctor}
+  \gdef\@maleadvisertitle{Advisor}
+  \gdef\@femaleadvisertitle{Advisor}
+  \gdef\@malecoadvisertitle{Co-Advisor}
+  \gdef\@femalecoadvisertitle{Co-Advisor}
   \gdef\@notdefined{UNDEFINED}
   \gdef\acknowledgementsname{Acknowledgements}
   \gdef\@axiomname{Axiom}
@@ -193,29 +213,47 @@
 
 %% School identification
 
-\def\university#1{%
-  \gdef\@university{#1}}
-\def\@university{Universidade Federal de Pernambuco}
+\def\universitypt#1{%
+  \gdef\@universitypt{#1}}
+\def\@universitypt{Universidade Federal de Pernambuco}
+
+\def\universityen#1{%
+  \gdef\@universityen{#1}}
+\def\@universityen{Federal University of Pernambuco}
 
 \def\universitylogo{ufpelogo.tex}
 
 \let\@showinstitute=0
-\def\institute#1{%
-  \let\@showinstitute=1
-  \gdef\@institute{#1}}
+\def\institutept#1{%
+  \let\@showinstitutept=1
+  \gdef\@institutept{#1}}
+\def\instituteen#1{%
+  \let\@showinstituteen=1
+  \gdef\@instituteen{#1}}
 
 \let\@showdepartment=0
-\def\department#1{%
+\def\departmentpt#1{%
   \let\@showdepartment=1
-  \gdef\@department{#1}}
+  \gdef\@departmentpt{#1}}
+\def\departmenten#1{%
+  \let\@showdepartment=1
+  \gdef\@departmenten{#1}}
 
-\def\program#1{%
-  \gdef\@program{#1}}
-\def\@program{\@notdefined}
+\def\programpt#1{%
+  \gdef\@programpt{#1}}
+\def\@programpt{\@notdefined}
 
-\def\majorfield#1{%
-  \gdef\@majorfield{#1}}
-\def\@majorfield{\@notdefined}
+\def\programen#1{%
+  \gdef\@programen{#1}}
+\def\@programen{\@notdefined}
+
+\def\majorfieldpt#1{%
+  \gdef\@majorfieldpt{#1}}
+\def\@majorfieldpt{\@notdefined}
+
+\def\majorfielden#1{%
+  \gdef\@majorfielden{#1}}
+\def\@majorfielden{\@notdefined}
 
 \def\address#1{%
   \gdef\@address{#1}}
@@ -290,14 +328,19 @@
 
 
 \gdef\@presentationtext{%
+\if\@language0
 Trabalho apresentado ao Programa de
-\@program\ do \if\@showdepartment1\@department\ \else\@institute\ \fi
-da \@university\ como requisito parcial para obtenção do
-grau de \@degree\ em \@majorfield.
-\vskip\baselineskip
-\vskip\baselineskip
-A \@texttype{} presented to the Federal University of Pernambuco in partial
-fulfillment of the requirements for the degree of M.Sc. in Computer Science.
+\@programpt\ do \if\@showdepartment1\@departmentpt\ \else\@institutept\ \fi
+da \@universitypt\ como requisito parcial para obtenção do
+grau de \@degree\ em \@majorfieldpt.
+\fi
+\if\@language1 %If language is English
+% \vskip\baselineskip
+% \vskip\baselineskip
+A \@texttype{} presented to the \if\@showdepartment1\@departmenten\
+\else\@instituteen\ \fi of \@universityen\ in partial fulfillment of the
+requirements for the degree of \@degree\ in \@majorfielden.
+\fi
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -334,13 +377,13 @@ fulfillment of the requirements for the degree of M.Sc. in Computer Science.
   \if@openright\cleardoublepage\else\clearpage\fi
   \thispagestyle{empty}
   \begin{center}
-  \includegraphics[scale=0.65]{cinlogo.png} \\
+  \includegraphics[scale=0.65]{cinlogo} \\
   \vfill
   %\begin{minipage}{110mm}
     \begin{center}
       {\Large {``\@title''}}\\
       \vskip\baselineskip
-      {\large By}
+      {\large \@textby}
       \vskip\baselineskip
       {\LARGE \textbf{\@author}}
       \vskip\baselineskip
@@ -348,14 +391,18 @@ fulfillment of the requirements for the degree of M.Sc. in Computer Science.
     \end{center}
   %\end{minipage}\\
   \vspace{1.4cm}
-  \includegraphics[width=1cm]{ufpelogo.png} \\
+  \includegraphics[width=1cm]{ufpelogo} \\
   %{\sf\large \@university
   %\if\@showinstitute1\\
   %\@institute\fi
   %\if\@showdepartment1\\
   %\@department\fi
   %} \\
-  {\fontfamily{times}\selectfont \tiny \@university\\}
+  \if\@language0
+    {\fontfamily{times}\selectfont \tiny \@universitypt\\}
+  \else
+    {\fontfamily{times}\selectfont \tiny \@universityen\\}
+  \fi
   {\fontfamily{times}\selectfont \tiny posgraduacao@cin.ufpe.br\\}
   {\fontfamily{times}\selectfont \tiny \url{www.cin.ufpe.br/~posgraduacao}\\}
   \vskip\baselineskip
@@ -375,25 +422,40 @@ fulfillment of the requirements for the degree of M.Sc. in Computer Science.
   
 	\begin{figure}[ht]
 	\begin{minipage}[b]{1.5cm}
-	  \includegraphics[width=1.5cm]{ufpelogo.png}
+	  \includegraphics[width=1.5cm]{ufpelogo}
 	\end{minipage}
 	\hspace{0.2cm}
 	\begin{minipage}[b]{16cm}
 	  {
-		  \sf\Large
-		  \@university
-		  \vskip 0.1cm
-		  \if\@showinstitute1
-		    \\
-		    \@institute
-		    \vskip 0.1cm
-		  \fi
-		  \if\@showdepartment1
-		    \\
-		    \@department
-		    \vskip 0.1cm
-		  \fi
-		  \@program
+		  \if\@language0
+    		  \sf\Large
+    		  \@universitypt
+    		  \vskip 0.1cm
+    		  \if\@showinstitute1
+              \\
+    		    \@institutept
+    		    \vskip 0.1cm
+    		  \fi
+    		  \if\@showdepartment1
+    		    \@departmentpt
+    		    \vskip 0.1cm
+    		  \fi
+    		  \@programpt
+    	  \else
+    	      \sf\Large
+              \@universityen
+              \vskip 0.1cm
+              \if\@showinstitute1
+              \\
+                \@instituteen
+                \vskip 0.1cm
+              \fi
+              \if\@showdepartment1
+                \@departmenten
+                \vskip 0.1cm
+              \fi
+              \@programen
+    	  \fi
 	  }
 	\end{minipage}
 	\end{figure}
