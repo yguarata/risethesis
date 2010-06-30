@@ -1,15 +1,19 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%% risethesis.cls
-%%% RiSE Thesis/Dissertation document class
-%%% 2008 -- Yguaratã Cerqueira Cavalcanti (yguarata@gmail.com)
-%%%			Vinicius Cardoso Garcia (vinicius.garcia@gmail.com)
-%%%
-%%% This class is based on UFPEThesis class, originally edited by Paulo
-%%% Gustavo Soares Fonseca.
-%%%
-%%% THIS FILE COMES WITH NO WARRANTIES
-%%% PERMISSION TO COPY AND REDISTRIBUTE FREE OF CHARGE
-%%% FOR ACADEMIC PURPOSES ONLY
+%% RiSE Latex Template - version 0.5
+%%
+%% RiSE's latex template for thesis and dissertations
+%% http://risetemplate.sourceforge.net
+%%
+%% (c) 2010 Yguaratã Cerqueira Cavalcanti (yguarata@gmail.com)
+%%          Vinicius Cardoso Garcia (vinicius.garcia@gmail.com)
+%%
+%% This document was initially based on UFPEThesis template, from Paulo Gustavo
+%% S. Fonseca.
+%%
+%% ACKNOWLEDGEMENTS
+%%
+%% We would like to thanks the RiSE's reasearchers community and the 
+%% other students from Federal University of Pernambuco who contributed
+%% to the RiSE template development.
 
 \ProvidesClass{risethesis}[2008/05/06]
 %\input{aboutufpethesis.txt}
