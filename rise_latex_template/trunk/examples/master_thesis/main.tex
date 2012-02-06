@@ -3,7 +3,7 @@
 %% RiSE's latex template for thesis and dissertations
 %% http://risetemplate.sourceforge.net
 %%
-%% (c) 2010 Yguaratã Cerqueira Cavalcanti (yguarata@gmail.com)
+%% (c) 2012 Yguaratã Cerqueira Cavalcanti (yguarata@gmail.com)
 %%          Vinicius Cardoso Garcia (vinicius.garcia@gmail.com)
 %%
 %% This document was initially based on UFPEThesis template, from Paulo Gustavo
@@ -20,7 +20,7 @@
 %% We strongly recommend you to compile your documents using pdflatex command.
 %% It is also recommend use the texlipse plugin for Eclipse to edit your documents.
 %%
-%% Options:
+%% Options for \documentclass command:
 %%         * Idiom
 %%           pt   - Portguese (default)
 %%           en   - English
@@ -64,13 +64,15 @@
 %%          Example: See \chapref{chap:introduction}. It will produce 
 %%                   'See Chapter 1', in case of English language.
 
-\documentclass[en,oneside,onehalfspacing]{risethesis}
+\documentclass[en,twoside,onehalfspacing]{risethesis}
 
 \usepackage{natbib}
 \usepackage{babel}
 \usepackage{supertabular}
 \usepackage{fancybox}
 \usepackage{acronym}
+\usepackage{microtype}
+
 %% Change the following pdf author attribute name to your name.
 \usepackage[linkcolor=blue,citecolor=blue,urlcolor=blue,colorlinks,pdfpagelabels,pdftitle={ycc-msc},pdfauthor={Yguaratã
 Cerqueira Cavalcanti}]{hyperref}
@@ -111,7 +113,7 @@ professors who gave me all necessary support to get here.
 I would like to thank and dedicate this dissertation to the following people:
 \ldots
 
-\begin{epigraph}[Open My Eyes]{S.o.ja.}
+\begin{epigraph}[Open My Eyes]{S.O.J.A.}
 I open my eyes each morning I rise, to find a true\\
 thought, know that it's real, I'm lucky to breathe,\\
 I'm lucky to feel, I'm glad to wake up, I'm glad to be\\
@@ -125,16 +127,28 @@ we'll be all right.
 \end{epigraph}
 
 \resumo
+% Escreva seu resumo no arquivo resumo.tex
 \input{resumo}
 
 \abstract
+% Escreva seu abstract no arquivo abstract.tex
 \input{abstract}
 
+% Sumário (tables of contents)
 \tableofcontents
+
+% Lista de figuras (list of figures)
 \listoffigures
+
+% Lista de tabelas (list of tables)
 \listoftables
-% Acronyms
+
+% Lista de acrônimos (siglas) (list of acronyms)
+% Veja o munal de como usar acroônimos em latex:
+%   http://linorg.usp.br/CTAN/macros/latex/contrib/acronym/acronym.pdf
+\listofacronyms
 \input{acronyms}
+
 \mainmatter
 
 \include{chapters/introduction/main}
