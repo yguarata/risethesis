@@ -11,9 +11,13 @@
 %%
 %% ACKNOWLEDGEMENTS
 %%
-%% We would like to thanks the RiSE's reasearchers community and the 
-%% other students from Federal University of Pernambuco who contributed
-%% to the RiSE template development.
+%% We would like to thanks the RiSE's researchers community, the 
+%% students from Federal University of Pernambuco, and other users that have
+%% been contributing to this projects with comments and patches.
+%%
+%% INSTRUCTIONS
+%%
+%% See the main.tex file for an example of this class usage.
 
 \ProvidesClass{risethesis}[2008/05/06]
 %\input{aboutufpethesis.txt}
@@ -57,6 +61,15 @@
 
 \DeclareOption{phd}{%
   \let\@degreetype=4}
+  
+\DeclareOption{singlespacing}{%
+  \let\@linespacing=0}
+  
+\DeclareOption{onehalfspacing}{%
+  \let\@linespacing=1}
+  
+\DeclareOption{doublespacing}{%
+  \let\@linespacing=2}
 
 % Default options
 \ExecuteOptions{pt,msc,print}
@@ -351,6 +364,14 @@ requirements for the degree of \@degree\ in \@majorfielden.
 %% PAGE LAYOUT
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\if\@linespacing0
+  \singlespacing
+\else\if\@linespacing1
+  \onehalfspacing
+\else\if\@linespacing2
+  \doublespacing
+\fi\fi\fi
+  
 \setlength{\topmargin}{0mm}
 \setlength{\textheight}{\paperheight-\headheight-\headsep-\footskip-2in}
 \setlength{\oddsidemargin}{0mm}
@@ -381,7 +402,7 @@ requirements for the degree of \@degree\ in \@majorfielden.
   \if@openright\cleardoublepage\else\clearpage\fi
   \thispagestyle{empty}
   \begin{center}
-  \includegraphics[scale=0.65]{cinlogo} \\
+  \includegraphics[scale=0.65]{departmentlogo} \\
   \vfill
   %\begin{minipage}{110mm}
     \begin{center}
@@ -395,7 +416,7 @@ requirements for the degree of \@degree\ in \@majorfielden.
     \end{center}
   %\end{minipage}\\
   \vspace{1.4cm}
-  \includegraphics[width=1cm]{ufpelogo} \\
+  \includegraphics[width=1cm]{institutionlogo} \\
   %{\sf\large \@university
   %\if\@showinstitute1\\
   %\@institute\fi
@@ -426,7 +447,7 @@ requirements for the degree of \@degree\ in \@majorfielden.
   
 	\begin{figure}[ht]
 	\begin{minipage}[b]{1.5cm}
-	  \includegraphics[width=1.5cm]{ufpelogo}
+	  \includegraphics[width=1.5cm]{institutionlogo}
 	\end{minipage}
 	\hspace{0.2cm}
 	\begin{minipage}[b]{16cm}
@@ -524,7 +545,7 @@ requirements for the degree of \@degree\ in \@majorfielden.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \def\resumo{%
-  \onehalfspacing
+  %\onehalfspacing
   \gdef\@keywordsname{\keywordsnamePT}
   \chapter*{\resumoname}}
 
@@ -534,7 +555,7 @@ requirements for the degree of \@degree\ in \@majorfielden.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \def\abstract{%
-  \onehalfspacing
+  %\onehalfspacing
   \gdef\@keywordsname{\keywordsnameEN}
   \chapter*{\abstrname}}
 

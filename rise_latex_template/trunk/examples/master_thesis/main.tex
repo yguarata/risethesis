@@ -11,9 +11,9 @@
 %%
 %% ACKNOWLEDGEMENTS
 %%
-%% We would like to thanks the RiSE's reasearchers community and the 
-%% other students from Federal University of Pernambuco who contributed
-%% to the RiSE template development.
+%% We would like to thanks the RiSE's researchers community, the 
+%% students from Federal University of Pernambuco, and other users that have
+%% been contributing to this projects with comments and patches.
 %%
 %% GENERAL INSTRUCTIONS
 %%
@@ -35,10 +35,14 @@
 %%         * Media
 %%           scr  - to eletronic version (PDF) / see the users guide
 %%
-%%
 %%         * Pagination
 %%           oneside - unique face press
 %%           twoside - two faces press
+%%
+%%		   * Line spacing
+%%           singlespacing  - the same as using \linespread{1}
+%%           onehalfspacing - the same as using \linespread{1.3}
+%%           doublespacing  - the same as using \linespread{1.6}
 %%
 %% Reference commands. Use the following commands to make references in your
 %% text:
@@ -60,7 +64,7 @@
 %%          Example: See \chapref{chap:introduction}. It will produce 
 %%                   'See Chapter 1', in case of English language.
 
-\documentclass[en,oneside]{risethesis}
+\documentclass[en,oneside,onehalfspacing]{risethesis}
 
 \usepackage{natbib}
 \usepackage{babel}
@@ -99,8 +103,8 @@ Cerqueira Cavalcanti}]{hyperref}
 \presentationpage
 
 \begin{dedicatory}
-I dedicate this dissertation to myself and all my family, friends and professors
-who gave me all necessary support to get here.
+I dedicate this dissertation to myself and all my family, friends and
+professors who gave me all necessary support to get here.
 \end{dedicatory}
 
 \acknowledgements
