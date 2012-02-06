@@ -3,7 +3,7 @@
 %% RiSE's latex template for thesis and dissertations
 %% http://risetemplate.sourceforge.net
 %%
-%% (c) 2010 Yguaratã Cerqueira Cavalcanti (yguarata@gmail.com)
+%% (c) 2010 YguaratÃ£ Cerqueira Cavalcanti (yguarata@gmail.com)
 %%          Vinicius Cardoso Garcia (vinicius.garcia@gmail.com)
 %%
 %% This document was initially based on UFPEThesis template, from Paulo Gustavo
@@ -11,13 +11,9 @@
 %%
 %% ACKNOWLEDGEMENTS
 %%
-%% We would like to thanks the RiSE's researchers community, the 
-%% students from Federal University of Pernambuco, and other users that have
-%% been contributing to this projects with comments and patches.
-%%
-%% INSTRUCTIONS
-%%
-%% See the main.tex file for an example of this class usage.
+%% We would like to thanks the RiSE's reasearchers community and the 
+%% other students from Federal University of Pernambuco who contributed
+%% to the RiSE template development.
 
 \ProvidesClass{risethesis}[2008/05/06]
 %\input{aboutufpethesis.txt}
@@ -96,8 +92,9 @@
 \RequirePackage[scaled=0.92]{helvet}
 \RequirePackage{courier}
 \RequirePackage{appendix}
-\usepackage{microtype}
-\usepackage{setspace}
+\RequirePackage{acronym}
+\RequirePackage{fancybox}
+\RequirePackage{setspace}
 
 \if\@scr0
   \RequirePackage{graphicx}
@@ -127,15 +124,16 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %% Language Independent
-% \gdef\@bachelordissertation{Trabalho de Graduação}
-% \gdef\@mastersdissertation{Dissertação de Mestrado}
-% \gdef\@phdqualifying{Monografia de Qualificação}
+% \gdef\@bachelordissertation{Trabalho de GraduaÃ§Ã£o}
+% \gdef\@mastersdissertation{DissertaÃ§Ã£o de Mestrado}
+% \gdef\@phdqualifying{Monografia de QualificaÃ§Ã£o}
 % \gdef\@phdproposal{Proposta de Tese de Doutorado}
 % \gdef\@phdthesis{Tese de Doutorado}
 % \gdef\@bachelordegree{Bacharel}
 % \gdef\@mastersdegree{Mestre}
 % \gdef\@phddegree{Doutor}
 \gdef\resumoname{Resumo} \gdef\abstrname{Abstract}
+\gdef\acronimoname{Lista de AcrÃ´nimos} \gdef\acronymname{List of Acronyms}
 \gdef\keywordsnamePT{Palavras-chave}
 \gdef\keywordsnameEN{Keywords}
 
@@ -143,9 +141,9 @@
 
 % Portuguese
 \if\@language0
-  \gdef\@bachelordissertation{Trabalho de Graduação}
-  \gdef\@mastersdissertation{Dissertação de Mestrado}
-  \gdef\@phdqualifying{Monografia de Qualificação}
+  \gdef\@bachelordissertation{Trabalho de GraduaÃ§Ã£o}
+  \gdef\@mastersdissertation{DissertaÃ§Ã£o de Mestrado}
+  \gdef\@phdqualifying{Monografia de QualificaÃ§Ã£o}
   \gdef\@phdproposal{Proposta de Tese de Doutorado}
   \gdef\@phdthesis{Tese de Doutorado}
   \gdef\@bachelordegree{Bacharel}
@@ -155,25 +153,25 @@
   \gdef\@femaleadvisertitle{Orientadora}
   \gdef\@malecoadvisertitle{Co-Orientador}
   \gdef\@femalecoadvisertitle{Co-Orientadora}
-  \gdef\@notdefined{NÃO DEFINIDO}
+  \gdef\@notdefined{NÃƒO DEFINIDO}
   \gdef\acknowledgementsname{Agradecimentos}
   \gdef\@axiomname{Axioma}
   \gdef\@conjecturename{Conjectura}
-  \gdef\@defname{Definição}
+  \gdef\@defname{DefiniÃ§Ã£o}
   \gdef\@lemmaname{Lema}
   \gdef\@theoname{Teorema}
-  \gdef\@propname{Proposição}
-  \gdef\@corname{Corolário}
+  \gdef\@propname{ProposiÃ§Ã£o}
+  \gdef\@corname{CorolÃ¡rio}
   \gdef\@proofname{Prova}
   \gdef\@figurename{Figura}
   \gdef\@tablename{Tabela}
-  \gdef\@equationame{equação}
-  \gdef\@chaptername{Capítulo}
+  \gdef\@equationame{equaÃ§Ã£o}
+  \gdef\@chaptername{CapÃ­tulo}
   \gdef\@textby{Por}
-  \gdef\@sectionname{Seção}
-  \gdef\@appendixname{Apêndice}
-  \gdef\@pagename{página}
-  \gdef\@listacronymname{Acrônimos}
+  \gdef\@sectionname{SeÃ§Ã£o}
+  \gdef\@appendixname{ApÃªndice}
+  \gdef\@pagename{pÃ¡gina}
+  \gdef\@listacronymname{AcrÃ´nimos}
   \gdef\@colophontext{%
   \urlstyle{rm}%
   Este volume foi tipografado em \LaTeX\ na classe \textsf{RiSEThesis}
@@ -348,7 +346,7 @@
 \if\@language0
 Trabalho apresentado ao Programa de
 \@programpt\ do \if\@showdepartment1\@departmentpt\ \else\@institutept\ \fi
-da \@universitypt\ como requisito parcial para obtenção do
+da \@universitypt\ como requisito parcial para obtenÃ§Ã£o do
 grau de \@degree\ em \@majorfieldpt.
 \fi
 \if\@language1 %If language is English
@@ -402,7 +400,7 @@ requirements for the degree of \@degree\ in \@majorfielden.
   \if@openright\cleardoublepage\else\clearpage\fi
   \thispagestyle{empty}
   \begin{center}
-  \includegraphics[scale=0.65]{departmentlogo} \\
+  \includegraphics[scale=0.65]{cinlogo} \\
   \vfill
   %\begin{minipage}{110mm}
     \begin{center}
@@ -416,7 +414,7 @@ requirements for the degree of \@degree\ in \@majorfielden.
     \end{center}
   %\end{minipage}\\
   \vspace{1.4cm}
-  \includegraphics[width=1cm]{institutionlogo} \\
+  \includegraphics[width=1cm]{ufpelogo} \\
   %{\sf\large \@university
   %\if\@showinstitute1\\
   %\@institute\fi
@@ -447,7 +445,7 @@ requirements for the degree of \@degree\ in \@majorfielden.
   
 	\begin{figure}[ht]
 	\begin{minipage}[b]{1.5cm}
-	  \includegraphics[width=1.5cm]{institutionlogo}
+	  \includegraphics[width=1.5cm]{ufpelogo}
 	\end{minipage}
 	\hspace{0.2cm}
 	\begin{minipage}[b]{16cm}
@@ -558,7 +556,6 @@ requirements for the degree of \@degree\ in \@majorfielden.
   %\onehalfspacing
   \gdef\@keywordsname{\keywordsnameEN}
   \chapter*{\abstrname}}
-
   
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Keywords
@@ -627,6 +624,14 @@ requirements for the degree of \@degree\ in \@majorfielden.
    \addcontentsline{toc}{chapter}{\listtablename}
    \@starttoc{lot}}
 
+\newcommand{\listofacronyms}{%
+   \if\@language1
+      \chapter*{\acronymname}
+      \addcontentsline{toc}{chapter}{\acronymname}
+   \else\if\@language0
+      \chapter*{\acronimoname}
+      \addcontentsline{toc}{chapter}{\acronimoname}
+   \fi\fi}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Some codes coming from phdthesis
@@ -783,7 +788,7 @@ requirements for the degree of \@degree\ in \@majorfielden.
 	{0pt}% Heading indent amount
 	{\bfseries}{.}% Heading font and punctuation after it
 	{1ex plus 0pt minus .2ex}% Space after heading 
-	{}% Head spec (empty = same as ‘plain’ style
+	{}% Head spec (empty = same as ï¿½plainï¿½ style
 \theoremstyle{definition}
 \newtheorem{Def}{\@defname}[chapter]
 \theoremstyle{theo}
