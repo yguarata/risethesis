@@ -1,0 +1,172 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<META HTTP-EQUIV="Keywords" 
+    CONTENT="latex, class, template, thesis, phd, msc, bsc">
+<META HTTP-EQUIV="Author" CONTENT="Yguaratã Cerqueira Cavalcanti">
+<META HTTP-EQUIV="Reply-to" CONTENT="yguarata@gmail.com">
+
+<title>RiSE LaTeX Class for B.Sc., M.Sc. and Ph.D. thesis.</title>
+<link rel="stylesheet" href="styles.css" type="text/css" />
+<link REL="SHORTCUT ICON" HREF="images/favicon.png" type="image/x-icon"/>
+
+<style type="text/css">
+dt { margin-top: 1em; font-weight: bold; }
+</style>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-19543796-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+</head>
+<body>
+
+<div id="wrap">
+<div class="header">
+	<div class="title">
+		<h1><a>RiSE LaTeX Class</a></h1>
+		<h2>A LaTeX class provided by RiSE researches for thesis writing</h2>
+	</div>
+		
+	<div class="clear"></div>
+</div>
+
+<div class="pagewrapper">
+<div class="innerpagewrapper">
+<div class="page">
+
+<div class="content">
+				
+<h3><a name="about">About</a></h3>
+<p>
+This project provides an elegant, almost fully customizable, LaTeX class and template for B.Sc., M.Sc. and Ph.D. thesis. It 
+is developed by <a href="http://www.rise.com.br/research">RiSE researchers</a> and it was 
+initially based on <a href="www.cin.ufpe.br/~paguso/ufpethesis/">UFPE Thesis class</a> proposed 
+for <a href="http://www.cin.ufpe.br">Center for Informatics at Federal University of Pernambuco</a> 
+undergraduate and graduate programs.
+</p>
+
+<h3><a name="overview">Overview of the template</a></h3>
+<p>In this <a href="http://risetemplate.svn.sourceforge.net/viewvc/risetemplate/rise_latex_template/trunk/examples/master_thesis/main.pdf?revision=10">link</a> you can
+download an example of a M.Sc. thesis.</p>
+
+<h3><a name="features">Features</a></h3>
+<p>Current, the following features are provided by the class:</p>
+
+<ul>
+	<li>Writing B.Sc. documents (bsc)</li>
+	<li>Writing M.Sc. documents (msc)</li>
+	<li>Writing Ph.D. documents
+		<ul>
+			<li>Proposal (prop)</li>
+			<li>Qualification (qual)</li>
+			<li>Final thesis (phd)</li>
+		</ul>
+	</li>
+	<li>Language options
+		<ul>
+			<li>English (en)</li>
+			<li>Portuguese (pt)</li>
+		</ul>
+	</li>
+	<li>Line spacing options
+		<ul>
+			<li>Single spacing (singlespacing)</li>
+			<li>One half spacing (onehalfspacing)</li>
+			<li>Double spacing (double spacing)</li>
+		</ul>
+	</li>
+	<li>Pagination options
+		<ul>
+			<li>One sided, for unique face press (oneside)</li>
+			<li>Two sided, for two faces press (twoside)</li>
+		</ul>
+	</li>
+	<li>List of abbreviations through the <i>acronym</i> package
+	</li>
+	<li>Referencing commands
+		<ul>
+          <li>\figref  -- for Figure reference</li>
+          <li>\tabref  -- for Table reference</li>
+          <li>\eqnref  -- for equation reference</li>
+          <li>\chapref -- for chapter reference</li>
+          <li>\secref  -- for section reference</li>
+          <li>\appref  -- for appendix reference</li>
+          <li>\axiref  -- for axiom reference</li>
+          <li>\conjref -- for conjecture reference</li>
+          <li>\defref  -- for definition reference</li>
+          <li>\lemref  -- for lemma reference</li>
+          <li>\theoref -- for theorem reference</li>
+          <li>\corref  -- for corollary reference</li>
+          <li>\propref -- for proprosition reference</li>
+          <li>\pgref   -- for page reference</li>
+		</ul>
+	</li>
+</ul>
+
+<h3><a name="ufpe">For UFPE students</a></h3>
+<p>The RiSE Latex class has been tested by several students from CIn, UFPE. A lot of contributions
+from them has been also received. Thus, it satisfies most of the requirements from the department about
+the thesis format. However, probably some customization will be needed to fully satisfies the cover 
+that is provided by the department when printing the final thesis to the library.</p>
+
+<h3><a name="custom">Customization</a></h3>
+<p>The RiSE Latex class is easily customizable for the most common document issues through
+the options that the class provides. For a complete list of options see the examples provided 
+in the distribution package.</p>
+<p>
+If the options provided by the class are not enough for the customization, we believe that it is very easy to
+hack the class file. ;)
+</p>
+
+</div>
+				
+<div class="sidebar">
+	<h4>MENU</h4>
+	<ul>
+		<li><a href="#about">About</a></li>
+		<li><a href="#overview">Overview of the template</a></li>
+		<li><a href="#features">Features</a></li>
+		<li><a href="#ufpe">For UFPE students</a></li>
+		<li><a href="#custom">Template customization</a></li>
+	</ul>
+	<a href="http://www.sourceforge.net/projects/risetemplate">Sourceforge project</a>
+	<ul>
+		<li><a href="https://sourceforge.net/tracker/?group_id=271537">Reporting bugs/enhancements</a></li>
+		<li><a href="http://sourceforge.net/projects/risetemplate/files">Downloads</a></li>
+		<li><a href="http://sourceforge.net/project/project_donations.php?group_id=271537">Donate</a></li>
+	</ul>
+	<h4>CONTACT</h4>
+	<p><br>
+	<img src="images/email.png"/>
+	</p>
+	<h4>ACKNOWLEDGEMENTS</h4>
+	<p>We would like to thanks the RiSE's researchers community, the 
+	students from Federal University of Pernambuco, and other users that have
+	been contributing to this projects with comments and patches.</p>		
+</div>
+				
+<div class="footer">
+	<p><a href="http://validator.w3.org/check/referer" title="valid XHTML">XHTML</a> | <a href="http://jigsaw.w3.org/css-validator/check/referer" title="valid CSS">CSS</a> &nbsp;&nbsp; &copy; Design: <a href="http://www.spyka.net">spyka webmaster</a> | <a href="http://www.justfreetemplates.com">Free Web Templates</a></p> 
+</div>
+
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+
+</script>
+</body>
+</html>
