@@ -64,7 +64,7 @@
 %%          Example: See \chapref{chap:introduction}. It will produce 
 %%                   'See Chapter 1', in case of English language.
 
-\documentclass[en,twoside,onehalfspacing]{risethesis}
+\documentclass[en,twoside,onehalfspacing,msc]{risethesis}
 
 \usepackage{natbib}
 \usepackage{babel}
@@ -128,21 +128,20 @@ we'll be all right.
 \input{resumo}
 
 \abstract
-% Escreva seu abstract no arquivo abstract.tex
+% Write your abstract in a file called abstract.tex
 \input{abstract}
 
-% Sum�rio (tables of contents)
+% Summary (tables of contents)
 \tableofcontents
 
-% Lista de figuras (list of figures)
+% List of figures
 \listoffigures
 
-% Lista de tabelas (list of tables)
+% List of tables
 \listoftables
 
-% Lista de acr�nimos (siglas) (list of acronyms)
-% Veja o munal de como usar acro�nimos em latex:
-%   http://linorg.usp.br/CTAN/macros/latex/contrib/acronym/acronym.pdf
+% List of acronyms
+% Acronyms manual: http://linorg.usp.br/CTAN/macros/latex/contrib/acronym/acronym.pdf
 \listofacronyms
 \input{acronyms}
 
