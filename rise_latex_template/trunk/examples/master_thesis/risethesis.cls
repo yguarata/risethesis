@@ -78,10 +78,9 @@
 %% PACKAGES
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \RequirePackage{amsmath,amsfonts,amssymb,amsthm}
-\RequirePackage{babel}
 \RequirePackage{calc}
 \RequirePackage{ifthen}
-\RequirePackage[latin1]{inputenc}
+\RequirePackage[utf8]{inputenc}
 \RequirePackage{textcase}
 \RequirePackage{textcomp}
 \RequirePackage{url}
@@ -170,6 +169,9 @@
   \gdef\@textby{Por}
   \gdef\@sectionname{Seção}
   \gdef\@appendixname{Apêndice}
+  \newcommand\bibliographytocname{Referências Bibliográficas}
+  \renewcommand{\appendixtocname}{Apêndice}
+  \renewcommand{\appendixpagename}{Apêndice}
   \gdef\@pagename{página}
   \gdef\@listacronymname{Acrônimos}
   \gdef\@colophontext{%
@@ -209,7 +211,9 @@
   \gdef\@equationame{equation}
   \gdef\@chaptername{Chapter}
   \gdef\@sectionname{Section}
-  \gdef\@appendixname{Appendix}
+  \renewcommand{\appendixtocname}{Appendix}
+  \renewcommand{\appendixpagename}{Appendix}
+  \newcommand\bibliographytocname{Bibliography}
   \gdef\@pagename{page}
   \gdef\@listacronymname{Acronyms}
   \gdef\@colophontext{%
