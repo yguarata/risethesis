@@ -94,6 +94,7 @@
 \RequirePackage{acronym}
 \RequirePackage{fancybox}
 \RequirePackage{setspace}
+\RequirePackage{listings}
 
 \if\@scr0
   \RequirePackage{graphicx}
@@ -154,6 +155,8 @@
   \gdef\@femalecoadvisertitle{Co-Orientadora}
   \gdef\@notdefined{NÃO DEFINIDO}
   \gdef\acknowledgementsname{Agradecimentos}
+  \gdef\lstlistlistingname{Lista de Códigos Fonte}
+  \gdef\lstlistingname{Código Fonte}
   \gdef\@axiomname{Axioma}
   \gdef\@conjecturename{Conjectura}
   \gdef\@defname{Definição}
@@ -636,6 +639,11 @@ requirements for the degree of \@degree\ in \@majorfielden.
       \chapter*{\acronimoname}
       \addcontentsline{toc}{chapter}{\acronimoname}
    \fi\fi}
+
+\renewcommand\lstlistoflistings{%
+   \chapter*{\lstlistlistingname}
+   \addcontentsline{toc}{chapter}{\lstlistlistingname}
+   \@starttoc{lol}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Some codes coming from phdthesis
