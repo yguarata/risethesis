@@ -2,7 +2,7 @@
 \label{ch:introduction}
 
 \begin{quotation}[Um Passeio No Mundo Livre, Afrociberdelia]{Chico Science}
-Um passo à frente e você não está mais no mesmo lugar\\
+Um passo a frente e vocÃª nÃ£o estÃ¡ mais no mesmo lugar\\
 One step forward and you are not in the same place
 \end{quotation}
 
@@ -268,3 +268,22 @@ findings of this dissertation were produced:
   Characterization Study. Technical report, C.E.S.A.R and Federal University
   of Pernambuco.
 \end{itemize}
+
+\section{Example of Listings Package}
+\lstset{language=C,basicstyle=\small}
+\begin{lstlisting}[caption=This is a simple use of listings package.]
+#include <stdio.h>
+#define N 10
+/* Block
+ * comment */
+ 
+int main() {
+    int i;
+    // Line comment.
+    puts("Hello world!");
+    for (i = 0; i < N; i++) {
+        puts("LaTeX is also great for programmers!");
+    }
+    return 0;
+}
+\end{lstlisting}
