@@ -1,0 +1,166 @@
+%% RiSE Latex Template - version 0.5
+%%
+%% RiSE's latex template for thesis and dissertations
+%% http://risetemplate.sourceforge.net
+%%
+%% (c) 2012 Yguaratã Cerqueira Cavalcanti (yguarata@gmail.com)
+%%          Vinicius Cardoso Garcia (vinicius.garcia@gmail.com)
+%%
+%% This document was initially based on UFPEThesis template, from Paulo Gustavo
+%% S. Fonseca.
+%%
+%% ACKNOWLEDGEMENTS
+%%
+%% We would like to thanks the RiSE's researchers community, the 
+%% students from Federal University of Pernambuco, and other users that have
+%% been contributing to this projects with comments and patches.
+%%
+%% GENERAL INSTRUCTIONS
+%%
+%% We strongly recommend you to compile your documents using pdflatex command.
+%% It is also recommend use the texlipse plugin for Eclipse to edit your documents.
+%%
+%% Options for \documentclass command:
+%%         * Idiom
+%%           pt   - Portguese (default)
+%%           en   - English
+%%
+%%         * Text type
+%%           bsc  - B.Sc. Thesis
+%%           msc  - M.Sc. Thesis (default)
+%%           qual - PHD qualification (not tested yet)
+%%           prop - PHD proposal (not tested yet)
+%%           phd  - PHD thesis
+%%
+%%         * Media
+%%           scr  - to eletronic version (PDF) / see the users guide
+%%
+%%         * Pagination
+%%           oneside - unique face press
+%%           twoside - two faces press
+%%
+%%		   * Line spacing
+%%           singlespacing  - the same as using \linespread{1}
+%%           onehalfspacing - the same as using \linespread{1.3}
+%%           doublespacing  - the same as using \linespread{1.6}
+%%
+%% Reference commands. Use the following commands to make references in your
+%% text:
+%%          \figref  -- for Figure reference
+%%          \tabref  -- for Table reference
+%%          \eqnref  -- for equation reference
+%%          \chapref -- for chapter reference
+%%          \secref  -- for section reference
+%%          \appref  -- for appendix reference
+%%          \axiref  -- for axiom reference
+%%          \conjref -- for conjecture reference
+%%          \defref  -- for definition reference
+%%          \lemref  -- for lemma reference
+%%          \theoref -- for theorem reference
+%%          \corref  -- for corollary reference
+%%          \propref -- for proprosition reference
+%%          \pgref   -- for page reference
+%%
+%%          Example: See \chapref{chap:introduction}. It will produce 
+%%                   'See Chapter 1', in case of English language.
+
+\documentclass[en,twoside,onehalfspacing,msc]{risethesis}
+
+\usepackage{natbib}
+\usepackage{babel}
+\usepackage{supertabular}
+\usepackage{microtype}
+
+%% Change the following pdf author attribute name to your name.
+\usepackage[linkcolor=blue,citecolor=blue,urlcolor=blue,colorlinks,pdfpagelabels,pdftitle={rise-template-msc},pdfauthor={RiSE Latex Template}]{hyperref}
+
+\address{RECIFE}
+
+\universitypt{Universidade Federal de Pernambuco}
+\universityen{Federal University of Pernambuco}
+
+\departmentpt{Centro de Informática}
+\departmenten{Center for Informatics}
+
+\programpt{Pós-graduação em Ciência da Computação}
+\programen{Graduate in Computer Science}
+
+\majorfieldpt{Ciência da Computação}
+\majorfielden{Computer Science}
+
+\title{A Bug Report Analysis and Search Tool}
+\date{JULY/2009}
+
+\author{Yguaratã Cerqueira Cavalcanti}
+\adviser{Silvio Romero de Lemos Meira}
+\coadviser{Eduardo Santana de Almeida}
+
+\begin{document}
+
+\frontmatter
+\frontpage
+\presentationpage
+
+\begin{dedicatory}
+I dedicate this dissertation to myself and all my family, friends and
+professors who gave me all necessary support to get here.
+\end{dedicatory}
+
+\acknowledgements
+I would like to thank and dedicate this dissertation to the following people:
+\ldots
+
+\begin{epigraph}[Open My Eyes]{S.O.J.A.}
+I open my eyes each morning I rise, to find a true\\
+thought, know that it's real, I'm lucky to breathe,\\
+I'm lucky to feel, I'm glad to wake up, I'm glad to be\\
+here, with all of this world, and all of it's pain, all\\
+of it's lies, and all of it's flipped down, I still\\
+feel a sense of freedom, so glad I'm around,\\
+\vspace{0.5cm}
+It's my freedom, can't take it from me, i know it, it\\
+won't change, but we need some understanding, I know\\
+we'll be all right.
+\end{epigraph}
+
+\resumo
+% Escreva seu resumo no arquivo resumo.tex
+\input{resumo}
+
+\abstract
+% Write your abstract in a file called abstract.tex
+\input{abstract}
+
+% Summary (tables of contents)
+\tableofcontents
+
+% List of figures
+\listoffigures
+
+% List of tables
+\listoftables
+
+% List of acronyms
+% Acronyms manual: http://linorg.usp.br/CTAN/macros/latex/contrib/acronym/acronym.pdf
+\listofacronyms
+\input{acronyms}
+
+% List of listings
+\lstlistoflistings
+
+\mainmatter
+
+\include{chapters/introduction/main}
+
+\bibliographystyle{natbib}
+\addcontentsline{toc}{chapter}{\bibliographytocname}
+\bibliography{references}
+
+% Appendix
+\clearpage
+\addappheadtotoc
+\appendix
+\appendixpage
+\include{appendix/experiment-instruments}
+
+\end{document}

@@ -1,0 +1,244 @@
+\chapter{Experiment Instruments}
+\label{ap:measurement-instruments}
+
+
+\def \tick{
+$[$\hspace{0.3cm}$]$
+}
+
+\def \twooption#1#2{
+\tick #1.  \tick #2.
+}
+
+\def \threeoption#1#2#3{
+\tick #1.\newline
+\tick #2.\newline
+\tick #3.
+}
+
+\def \fouroption#1#2#3#4{
+\tick #1.\newline
+\tick #2.\newline
+\tick #3.\newline
+\tick #4.
+}
+
+\def \fiveoption#1#2#3#4#5{
+\tick #1.\newline
+\tick #2.\newline
+\tick #3.\newline
+\tick #4.\newline
+\tick #5.
+}
+\def \datefield{
+%date fied used in time sheets
+    /\hspace{0.4cm}/
+}
+
+\def \rcolor{
+%table row color
+    \rowcolor[gray]{0.9}
+}
+
+\def \hcolor{
+    \rowcolor[gray]{0.7}
+}
+
+\section{Time sheet}
+\label{ap:sec:time-sheet}
+
+\begin{table*}[h]
+  \centering
+  \begin{tabular}{|c|c|c|c|c|p{5cm}|}
+    \hline
+    \hcolor ID & $Start~date$ & $Start~time$ & $End~date$ & $End~time$ & 
+        $Is~it~a~duplicate?$\\
+    \hline
+       1 & \datefield  & : & \datefield & : & \twooption{Yes}{No} ID:\\
+    \hline
+       \rcolor 2 & \datefield  &  : & \datefield & : & \twooption{Yes}{No} ID:
+       \\
+    \hline
+       3 & \datefield  &  : & \datefield & : & \twooption{Yes}{No} ID:\\
+    \hline
+       \rcolor 4 & \datefield  &  : & \datefield & : & \twooption{Yes}{No} ID:\\
+    \hline
+       5 & \datefield  &  : & \datefield & : & \twooption{Yes}{No} ID:\\
+    \hline
+       \rcolor 6 & \datefield  &  : & \datefield & : & \twooption{Yes}{No} ID:\\
+    \hline
+       7 & \datefield  &  : & \datefield & : & \twooption{Yes}{No} ID:\\
+    \hline
+       \rcolor 8 & \datefield  &  : & \datefield & : & \twooption{Yes}{No} ID:\\
+    \hline
+       9 & \datefield  &  : & \datefield & : & \twooption{Yes}{No} ID:\\
+    \hline
+       \rcolor 10 & \datefield  &  : & \datefield & : & \twooption{Yes}{No} ID:\\
+    \hline
+        \multicolumn{6}{|c|}{\ldots}\\
+    \hline
+       23 & \datefield  &  : & \datefield & : & \twooption{Yes}{No} ID:\\
+    \hline
+       \rcolor 24 & \datefield  &  : & \datefield & : & \twooption{Yes}{No} ID:\\
+    \hline
+       25 & \datefield  &  : & \datefield & : & \twooption{Yes}{No} ID:\\
+    \hline
+       \rcolor 26 & \datefield  &  : & \datefield & : & \twooption{Yes}{No} ID:\\
+    \hline
+       27 & \datefield  &  : & \datefield & : & \twooption{Yes}{No} ID:\\
+    \hline
+       \rcolor 28 & \datefield  &  : & \datefield & : & \twooption{Yes}{No} ID:\\
+    \hline
+       29 & \datefield  &  : & \datefield & : & \twooption{Yes}{No} ID:\\
+    \hline
+       \rcolor 30 & \datefield  &  : & \datefield & : & \twooption{Yes}{No} ID:\\
+    \hline
+       31 & \datefield  &  : & \datefield & : & \twooption{Yes}{No} ID:\\
+    \hline
+       \rcolor 32 & \datefield  &  : & \datefield & : & \twooption{Yes}{No} ID:\\
+    \hline
+  \end{tabular}
+\caption{Time sheet used in the study.
+%The subjects use this time
+%sheet to note the start and end timestamps of a bug-report analysis, and mark
+%if has been found a duplicate for the bug-report under analysis.
+}
+\end{table*}
+
+\newpage
+\section{Questionnaire for Subjects Profile}
+\label{ap:sec:profile}
+
+\begin{table}[h]
+\centering
+\resizebox{15cm}{!}{
+\begin{tabular}{|p{\columnwidth}|}
+    \hline
+    \hcolor \textbf{\textsf{Questionnaire for Subjects Profile}}\\
+    \hline
+	    \textbf{How many years since graduation?}\\\\
+	    \tick years.\\\\
+    \hline
+        \textbf{How many projects do you have participated according to the
+        following categories?}\\ \\
+        \tick Low complexity.\\
+        \tick Medium complexity.\\
+        \tick High complexity.\\\\
+    \hline
+        \textbf{What were the roles that you played in the projects cited before
+        (developer, configuration manager, tester\ldots)?}
+        \\
+        \\
+    \hline
+        \textbf{How do you define your experience with bug-trackers?}\\\\
+        \tick I never used them before.\\
+        \tick I used them in every project i participated.\\
+        I used them in \tick projects.\\\\
+    \hline
+        \textbf{Do you have used any of the following bug-trackers?}\\\\
+        \tick Bugzilla. In: \tick industry  \tick academia\\
+        \tick Trac. In: \tick industry  \tick academia\\
+        \tick Mantis. In: \tick industry  \tick academia\\
+        \tick Jyra. In: \tick industry  \tick academia\\
+        \tick BSD Bug-tracker. In: \tick industry  \tick academia\\
+        \tick Other: \\\\
+    \hline
+        \textbf{Have you performed any analysis of Firefox bug-reports before?}
+        \\\\\twooption{Yes}{No}\\\\
+    \hline
+\end{tabular}
+}
+\caption{Questionnaire for bug-report submitters.}
+\end{table}
+
+\newpage
+\section{Form for Qualitative Analysis}
+\label{ap:sec:feedback}
+
+\begin{table}[h]
+\centering
+\resizebox{14cm}{!}{
+\begin{tabular}{|p{\columnwidth}|}
+    \hline
+    \hcolor \textbf{\textsf{Questionnaire for Qualitative Analysis}}\\
+    \hline
+        \textbf{Did you use any of the search filters provided by BAST?}
+        \\
+        \twooption{Yes}{No}
+        \\
+    \hline
+        \textbf{Is there any search filter you think it must be present in BAST?}
+        \\
+        \twooption{Yes}{No}
+        Cite them:
+        \\
+    \hline
+        \textbf{Did you have any problem with the search filters usage?}
+        \\
+        \twooption{Yes}{No}
+        Cite them:
+        \\
+    \hline
+        \textbf{Did you use the ordering features of BAST?}
+        \\
+        \twooption{Yes}{No}
+        \\
+    \hline
+        \textbf{Did you have any problem with ordering features?}
+        \\
+        \twooption{Yes}{No}
+        Cite them:
+        \\
+    \hline
+        \textbf{Do you think there is any other important information that
+        must be present in the list of search results?}
+        \\
+        \twooption{Yes}{No}
+        Cite them:
+        \\
+    \hline
+        \textbf{Did you have any problem to visualize the details from some
+        bug-report?} \\
+        \twooption{Yes}{No}
+        Cite them:
+        \\
+    \hline
+        \textbf{Do you believe the way bug-reports details are presented was
+        helpful to perform the analysis?}
+        \\
+        \twooption{Yes}{No}
+        \\
+    \hline 
+        \textbf{Was the recommendation of related bug-reports, presented  in
+        the bug-report details, useful for the analysis?}
+        \\
+        \twooption{Yes}{No}
+        \\
+    \hline
+        \textbf{Is there any other information concerning bug-reports details
+        you believe it should be present or emphasized?}
+        \\
+        \twooption{Yes}{No}
+        Cite them:
+        \\\\
+    \hline
+        \textbf{Did you use the help provided by BAST?}
+        \\
+        \twooption{Yes}{No}
+        \\
+    \hline
+        \textbf{Did you found any other problem/enhacement/defect that was not
+        mentioned before? Cite them.}
+        \\
+        \\
+        \\
+    \hline
+        \textbf{Please, write down any suggestion you think might would be useful.}
+        \\
+        \\
+        \\
+    \hline
+\end{tabular}
+}
+\caption{Questionnaire for qualitative analysis.}
+\end{table}
