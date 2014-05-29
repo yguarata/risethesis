@@ -546,28 +546,24 @@ requirements for the degree of \@degree\ in \@majorfielden.
     		  \@universitypt
     		  \vskip 0.1cm
     		  \if\@showinstitute1
-    		    \\
     		    \@institutept
     		    \vskip 0.1cm
     		  \fi
     		  \if\@showdepartment1
-    		    \\
     		    \@departmentpt
     		    \vskip 0.1cm
     		  \fi
-    		  \\
     		  \@programpt
     	  \else
     	      \sf\Large
               \@universityen
               \vskip 0.1cm
               \if\@showinstitute1
-                \\
+                \vskip \baselineskip
                 \@instituteen
                 \vskip 0.1cm
               \fi
               \if\@showdepartment1
-                \\
                 \@departmenten
                 \vskip 0.1cm
               \fi
