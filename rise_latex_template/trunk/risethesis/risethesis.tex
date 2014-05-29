@@ -64,7 +64,7 @@
 %%          Example: See \chapref{chap:introduction}. It will produce 
 %%                   'See Chapter 1', in case of English language.
 
-\documentclass[en,twoside,onehalfspacing,phd]{risethesis}
+\documentclass[pt,twoside,onehalfspacing,phd]{risethesis}
 
 \usepackage[english]{babel}
 \usepackage{colortbl}
@@ -83,18 +83,6 @@
 \captionsetup[table]{position=top,justification=centering,width=.85\textwidth,labelfont=bf,font=small}
 \captionsetup[lstlisting]{position=top,justification=centering,width=.85\textwidth,labelfont=bf,font=small}
 \captionsetup[figure]{position=bottom,justification=centering,width=.85\textwidth,labelfont=bf,font=small}
-
-%% Remove colors from hyperlinks
-\makeatletter
-\AtBeginDocument{%
-  \renewcommand*{\AC@hyperlink}[2]{%
-    \begingroup
-      \hypersetup{hidelinks}%
-      \hyperlink{#1}{#2}%
-    \endgroup
-  }%
-}
-\makeatother
 
 %% Change the following pdf author attribute name to your name.
 \usepackage[linkcolor=black,
