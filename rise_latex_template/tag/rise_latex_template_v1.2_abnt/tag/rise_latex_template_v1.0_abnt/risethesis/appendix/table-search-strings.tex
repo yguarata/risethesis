@@ -1,0 +1,86 @@
+\begin{table}[h]
+\centering
+\footnotesize
+ \rowcolors{2}{lightgray!30}{white}
+\caption{Search string per Search Engine.}
+\label{tbl:stringengine}
+\begin{tabular}{p{.15\textwidth}p{.8\textwidth}}
+\toprule
+\textbf{Search Engine} & \textbf{Search String}\\
+\toprule
+   	 	Google Scholar &  bug report OR track OR triage ``change
+   	 	request'' issue track OR request OR software OR ``modification request'' OR
+   	 	``defect track'' OR ``software issue''  repositories maintenance evolution\\
+
+   	 	ACM Portal & Abstract: "bug report" or Abstract:"change request"
+   	 	or Abstract:"bug track" or Abstract:"issue track" or  Abstract:"defect
+   	 	track" or Abstract:"bug triage" or Abstract: "software issue" or Abstract: "issue request"
+   	 	or Abstract: "modification request") and  (Abstract:software or
+   	 	Abstract:maintenance or Abstract:repositories or Abstract:repository \\
+
+   	 	IEEExplorer (1) & (((((((((("Abstract": "bug report") OR
+   	 	"Abstract":"change request") OR "Abstract":"bug track") OR "Abstract":"software issue") OR "Abstract":"issue request") OR
+        "Abstract":"modification request") OR "Abstract":"issue track") OR
+	    "Abstract":"defect track") OR "Abstract":"bug triage") AND
+	    "Abstract":software)\\
+
+         IEEExplorer (2) & (((((((((("Abstract": "bug report") OR
+         "Abstract":"change request") OR "Abstract":"bug track") OR "Abstract":"software issue") OR
+         "Abstract":"issue request") OR "Abstract":"modification request") OR
+         "Abstract":"issue track") OR "Abstract":"defect track") OR
+         "Abstract":"bug triage") AND "Abstract":maintenance)\\
+
+         IEEExplorer (3) & (((((((((("Abstract": "bug report") OR
+         "Abstract":"change request") OR "Abstract":"bug track") OR "Abstract":"software issue") OR
+         "Abstract":"issue request") OR "Abstract":"modification request") OR
+         "Abstract":"issue track") OR "Abstract":"defect track") OR
+         "Abstract":"bug triage") AND "Abstract":repositories)\\
+
+         IEEExplorer & (((((((((("Abstract": "bug report") OR
+         "Abstract":"change request") OR "Abstract":"bug track") OR "Abstract":"software issue") OR
+         "Abstract":"issue request") OR "Abstract":"modification request") OR
+         "Abstract":"issue track") OR "Abstract":"defect track") OR
+         "Abstract":"bug triage") AND "Abstract": repository)\\
+
+         Citeseer Library & (abstract: "bug report" OR abstract:"change request" OR abstract:"bug track" OR abstract:"issue track" OR
+	     abstract:"defect track" OR abstract:"bug triage" OR abstract: "software
+	     issue" OR abstract: "issue request" OR abstract: "modification request")
+	     AND (abstract:software OR abstract:maintenance OR abstract:repositories OR
+	     abstract:repository)\\
+
+	     Elsevier & ("bug report" OR "change
+	     request" OR "bug track" OR "issue track" OR "defect track" OR "bug triage" OR "software issue" OR  "issue request" OR
+	    "modification request") AND (software OR maintenance OR repositories OR
+	    repository)\\
+
+	    Scirus & ("bug report" OR "change request" OR "bug track" OR "issue track" OR  "defect track" OR "bug triage" OR
+        "software issue" OR  "issue request" OR "modification request") AND
+	    (software maintenance OR repositories OR repository) ANDNOT (medical OR
+	    aerospace)\\
+
+	    ScienceDirect & ("bug report" OR "change request" OR "bug track"
+	     OR "issue track" OR "defect track" OR "bug triage" OR "issue request" OR
+	     "modification request") AND LIMIT-TO(topics, "soft ware")\\
+
+	     Scopus & ("bug report" OR "change request" OR "bug track" OR
+	     "issue track" OR  "defect track" OR "bug triage" OR "software issue" OR
+	     "issue request" OR "modification request") AND (software maintenance OR
+	     repositories OR repository)\\
+
+	     Wiley & ("bug report" OR "change request"
+	     OR "bug track" OR "issue track" OR  "defect track" OR "bug triage" OR
+         "software issue" OR  "issue request" OR "modification request") AND
+	     (software maintenance OR repositories OR repository)\\
+
+	     ISI Web\newline of Knowledge & ("bug report" OR "change request" OR "bug
+	     track" OR "issue track" OR  "defect track" OR "bug triage" OR "software issue" OR  "issue request" OR "modification request") AND
+	    (software maintenance OR repositories OR repository) ANDNOT (medical OR
+	    aerospace)\\
+
+	    SpringerLink & ("bug report" OR "change request" OR "bug track" OR "issue track" OR  "defect track" OR "bug triage" OR
+        "software issue" OR  "issue request" OR "modification request") AND
+	    (software maintenance OR repositories OR repository) ANDNOT (medical OR
+	    aerospace)\\
+	\bottomrule
+\end{tabular}
+\end{table}
