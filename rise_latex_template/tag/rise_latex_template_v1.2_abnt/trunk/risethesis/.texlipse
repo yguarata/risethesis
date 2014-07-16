@@ -1,0 +1,14 @@
+#TeXlipse project settings
+#Wed Apr 23 22:26:43 BRT 2014
+markTmpDer=true
+builderNum=2
+outputDir=
+makeIndSty=
+bibrefDir=
+outputFormat=pdf
+tempDir=tmp
+mainTexFile=risethesis.tex
+outputFile=risethesis.pdf
+langSpell=en
+markDer=true
+srcDir=
