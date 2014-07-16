@@ -1,0 +1,45 @@
+O gerenciamento eficiente de solicitações de mudança (SM) é fundamental para o
+sucesso das atividades de manutenção e evolução de software. Entretanto, a
+atribuição de SMs a desenvolvedores de software é um aspecto custoso desse
+gerenciamento, pois demanda tempo e requer conhecimento apropriado do projeto de
+software. Com o propósito de diminuir esse custo, várias pesquisas já propuseram
+métodos de atribuição automática de SMs. Embora representem avanços na área,
+existem vários fatores inerentes a atribuição de SMs que não são considerados
+nessas pesquisas e são essenciais para a automação.
+
+Como demonstrado nesse trabalho, a atribuição automática deve, por exemplo,
+considerar a carga de trabalho, a experiência e o conhecimento dos
+desenvolvedores, a prioridade e a severidade das SMs, a afinidade dos
+desenvolvedores com os problemas descritos nas SMs, e até mesmo os
+relacionamentos interpessoais. Para tornar esse cenário ainda mais complexo,
+esses fatos podem variar de acordo com o projeto de software que está sendo
+desenvolvido. Assim, uma solução para o problema de atribuição de SMs depende de
+informações contextuais.
+
+Assim, esse trabalho propõe, implementa e valida uma solução arquitetural
+sensível ao contexto para atribuição automática de SMs. Dado o aspecto
+contextual da solução, a arquitetura enfatiza a necessidade de considerar as
+diversas fontes de informações presentes na organização, assim como a
+necessidade de se desenvolver algorítimos que implementem diferentes estratégias
+de atribuição. A proposta e implementação dessa solução é embasada em resultados
+de duas pesquisas quantitativas: um estudo de mapeamento sistemático da
+literatura, e uma pesquisa de questionário com desenvolvedores de software. Esse
+último forneceu um conjunto de requisitos que a solução automatizada deve
+satisfazer para que as estratégias de atribuição sejam atendidas, enquanto o
+mapeamento da literatura identificou técnicas, algoritmos, e outros requisitos
+necessários a automação.
+
+A implementação da arquitetura segue uma estratégia de automação, também
+elabo\-rada nesse trabalho, que possui dois componentes principais: um sistema
+especialista baseado em regras (SEBR); e um modelo de recuperação de informação
+(MRI) com técnicas de aprendizagem. Em nossa estratégia, esses dois componentes
+são executados alternadamente em momentos diferentes a fim de atribuir uma SM
+automaticamente. O SEBR processa regras simples e complexas, considerando
+informações contextuais do projeto de software e da organização que o
+desenvolve. O MRI é utilizado para fazer o casamento entre SMs e desenvolvedores
+de acordo com o histórico de atribuições.
+
+\begin{keywords}
+Engenharia de Software, Manutenção e Evolução de Software, Gerenciamento de
+Solicitações de Mudança, Atribuição Automática de Solicitações de Mudança
+\end{keywords}
