@@ -848,8 +848,8 @@ requirements for the degree of \@degree\ in \@majorfielden.
 % %% now reset the headers and footers
  \fancyhead{}
  \fancyfoot{}
-% 
-% %% put the page numbers on the bottom in a nice box
+ 
+% %% put the page numbers on the top in a nice box
 % %% even side pages
  \fancyhead[LE]{%
  	\rule{0cm}{4mm}\color{black}{\thepage}\hfill\leftmark
@@ -858,7 +858,7 @@ requirements for the degree of \@degree\ in \@majorfielden.
 % 
 % %% odd side pages
  \fancyhead[RO]{
- 	\rule{0cm}{4mm}\color{black}{\thepage}\hfill\rightmark
+ 	\rule{0cm}{4mm}\color{black}{\rightmark}\hfill\thepage
  }
 
 % Header style of the chapter page
