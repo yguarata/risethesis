@@ -180,6 +180,7 @@
   \gdef\@sectionname{Seção}
   \gdef\@appendixname{Apêndice}
   \newcommand\bibliographytocname{Referências Bibliográficas}
+  \renewcommand{\bibname}{\bibliographytocname}
   \renewcommand{\appendixtocname}{Apêndice}
   \renewcommand{\appendixpagename}{Apêndice}
   \gdef\@pagename{página}
@@ -224,6 +225,7 @@
   \renewcommand{\appendixtocname}{Appendix}
   \renewcommand{\appendixpagename}{Appendix}
   \newcommand\bibliographytocname{References}
+  \renewcommand{\bibname}{\bibliographytocname}
   \gdef\@pagename{page}
   \gdef\@listacronymname{Acronyms}
   \gdef\@colophontext{%
@@ -464,10 +466,10 @@ requirements for the degree of \@degree\ in \@majorfielden.
 	\backmatter
 	\bibliographystyle{abnt}
 	\setlength{\bibhang}{0pt}
-	\renewcommand{\bibname}{References}
 	\singlespacing % Change to singlespacing for the references
 	\begingroup
 	\raggedright
+	\renewcommand{\bibname}{\bibliographytocname}
 }
 {
 	\endgroup
