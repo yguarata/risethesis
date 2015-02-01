@@ -179,7 +179,8 @@
   \gdef\@textby{Por}
   \gdef\@sectionname{Seção}
   \gdef\@appendixname{Apêndice}
-  \newcommand\bibliographytocname{Referências Bibliográficas}
+  \gdef\@tocname{Sumário}
+  \newcommand\bibliographytocname{Referências}
   \renewcommand{\bibname}{\bibliographytocname}
   \renewcommand{\appendixtocname}{Apêndice}
   \renewcommand{\appendixpagename}{Apêndice}
@@ -222,6 +223,7 @@
   \gdef\@equationame{equation}
   \gdef\@chaptername{Chapter}
   \gdef\@sectionname{Section}
+  \gdef\@tocname{Contents}
   \renewcommand{\appendixtocname}{Appendix}
   \renewcommand{\appendixpagename}{Appendix}
   \newcommand\bibliographytocname{References}
@@ -444,8 +446,7 @@ requirements for the degree of \@degree\ in \@majorfielden.
 
 %% Lists, enumerations, etc.
 \setlist[itemize]{leftmargin=\parindent+\labelwidth-\labelsep, label={\tiny$\blacksquare$}}
-\setlist[enumerate,1]{leftmargin=\parindent+\labelwidth-\labelsep,label=\alph*)}
-\setlist[enumerate,2]{leftmargin=\parindent+\labelwidth-\labelsep,label={--}}
+\setlist[enumerate]{leftmargin=\parindent+\labelwidth-\labelsep}
 
 %% Appendix
 
@@ -810,7 +811,7 @@ requirements for the degree of \@degree\ in \@majorfielden.
 
 \renewcommand\tableofcontents{%
    \pagestyle{empty}
-   \chapter*{Summary}
+   \chapter*{\@tocname}
    \thispagestyle{empty}
    \@starttoc{toc}}
  
