@@ -1,0 +1,7 @@
+== Version 1.4
+
+* Fixed the title of the references chapter to comply with ABNT norm;
+* Fixed the translation of the title for Table of Contents;
+* Fixed the style of enumerated items to use numbers instead of letter.
+
+Special thanks to Kalil Araújo Bisto, for his contributions on these fixings.
