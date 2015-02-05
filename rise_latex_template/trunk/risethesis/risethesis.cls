@@ -184,6 +184,8 @@
   \renewcommand{\bibname}{\bibliographytocname}
   \renewcommand{\appendixtocname}{Apêndice}
   \renewcommand{\appendixpagename}{Apêndice}
+  \gdef\@listoftablesname{Lista de Tabelas}
+  \gdef\@listoffiguresname{Lista de Figuras}
   \gdef\@pagename{página}
   \gdef\@listacronymname{Acrônimos}
   \gdef\@colophontext{%
@@ -224,6 +226,8 @@
   \gdef\@chaptername{Chapter}
   \gdef\@sectionname{Section}
   \gdef\@tocname{Contents}
+  \gdef\@listoftablesname{List of Tables}
+  \gdef\@listoffiguresname{List of Figures}
   \renewcommand{\appendixtocname}{Appendix}
   \renewcommand{\appendixpagename}{Appendix}
   \newcommand\bibliographytocname{References}
@@ -818,13 +822,13 @@ requirements for the degree of \@degree\ in \@majorfielden.
 
 \renewcommand\listoffigures{%
    \pagestyle{empty}
-   \chapter*{\listfigurename}
+   \chapter*{\@listoffiguresname}
    \thispagestyle{empty}
    \@starttoc{lof}}
 
 \renewcommand\listoftables{%
    \pagestyle{empty}
-   \chapter*{\listtablename}
+   \chapter*{\@listoftablesname}
    \thispagestyle{empty}
    \@starttoc{lot}}
 
