@@ -1,3 +1,7 @@
+== Version 1.5
+
+* Fixing the translation of "List of Tables" and "List of Figures" to Portuguese.
+
 == Version 1.4
 
 * Fixed the title of the references chapter to comply with ABNT norm;
