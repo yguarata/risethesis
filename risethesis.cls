@@ -150,6 +150,7 @@
 
 % Portuguese
 \if\@language0
+  \RequirePackage[portuguese]{babel}
   \gdef\@bachelordissertation{Trabalho de Graduação}
   \gdef\@mastersdissertation{Dissertação de Mestrado}
   \gdef\@phdqualifying{Monografia de Qualificação}
@@ -197,6 +198,7 @@
   \fi}
 % English
   \else\if\@language1
+  \RequirePackage[english]{babel}
   \gdef\@bachelordissertation{B.Sc. Dissertation}
   \gdef\@mastersdissertation{M.Sc. Dissertation}
   \gdef\@phdqualifying{Ph.D. Thesis Qualification}
