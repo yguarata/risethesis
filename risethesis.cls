@@ -776,6 +776,19 @@ requirements for the degree of \@degree\ in \@majorfielden.
 %% Quotations
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\newenvironment{citationblock}%
+  {%
+  \begin{spacing}{1.}
+   \small
+   \begin{list}{}{%
+       \setlength{\listparindent}{0cm}%
+       \setlength{\itemindent}{\listparindent}%
+       \setlength{\rightmargin}{0cm}%
+       \setlength{\leftmargin}{4cm}%
+       \setlength{\parsep}{0pt}}%
+    \item\relax}%
+  {\end{list}\end{spacing}}
+
 \def\epigraph{%
   \if@openright\cleardoublepage\else\clearpage\fi
   \thispagestyle{empty}
