@@ -829,10 +829,16 @@ requirements for the degree of \@degree\ in \@majorfielden.
 \setcounter{tocdepth}{4}
 
 \renewcommand\tableofcontents{%
+
    \pagestyle{empty}
+
    \chapter*{\@tocname}
+
    \thispagestyle{empty}
-   \@starttoc{toc}}
+
+   \@starttoc{toc}
+
+   \thispagestyle{empty}}
  
 
 \renewcommand\listoffigures{%
