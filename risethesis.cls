@@ -546,68 +546,29 @@ requirements for the degree of \@degree\ in \@majorfielden.
 \def\presentationpage{%
   \if@openright\cleardoublepage\else\clearpage\fi
   \thispagestyle{empty}
-  
-	\begin{figure}[ht]
-	\begin{minipage}[b]{1.5cm}
-	  \includegraphics[width=1.5cm]{ufpelogo}
-	\end{minipage}
-	\hspace{0.2cm}
-	\begin{minipage}[b]{16cm}
-	  {
-		  \if\@language0
-    		  \sf\normalsize
-    		  \@universitypt
-    		  \vskip 0.1cm
-    		  \if\@showinstitute1
-    		    \@institutept
-    		    \vskip 0.1cm
-    		  \fi
-    		  \if\@showdepartment1
-    		    \@departmentpt
-    		    \vskip 0.1cm
-    		  \fi
-    		  \@programpt
-    	  \else
-    	      \sf\normalsize
-              \@universityen
-              \vskip 0.1cm
-              \if\@showinstitute1
-                \vskip \baselineskip
-                \@institutept
-                \vskip 0.1cm
-              \fi
-              \if\@showdepartment1
-                \@departmentpt
-                \vskip 0.1cm
-              \fi
-              \@programpt
-    	  \fi
-	  }
-	\end{minipage}
-	\end{figure}
   \vskip 25mm
   \begin{center}
-  {\normalsize \MakeUppercase{\@author}}
-  \vskip3\baselineskip
-  {\normalsize"\MakeUppercase{\@title}"}\\
+  {\Large \@author}
+  \vfill
+  \begin{center}
+	{\large\bfseries{\MakeUppercase{\@title}}}\\
+  \end{center}
   \vskip 38mm
   \begin{flushright}
     \begin{minipage}{100mm}
     \quotefonti %
     \@presentationtext
     \vskip2\baselineskip
-    \flushright{
-    	%\begin{center}
-    	%\begin{tabular}{rl}
-    	{\quotefont \@advisertitle:} \@adviser\\
-    	\if\@showcoadviser1{\quotefont\@coadvisertitle:} \@coadviser\\\fi
-    	%\end{tabular}
-    	%\end{center}
-    }
     \end{minipage}
   \end{flushright}
+  \flushleft{
+    	{\quotefont \@advisertitle:} \@adviser\\
+    	\if\@showcoadviser1{\quotefont\@coadvisertitle:} \@coadviser\\\fi
+  }
   \vfill
-  \@address, \@date
+  \@address
+  \\
+  \@date
   \end{center}
   \setcounter{page}{1}
 }
