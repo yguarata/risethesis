@@ -566,9 +566,11 @@ requirements for the degree of \@degree\ in \@majorfielden.
     	\if\@showcoadviser1{\quotefont\@coadvisertitle:} \@coadviser\\\fi
   }
   \vfill
-  \@address
-  \\
-  \@date
+ \begin{center}
+  		\@address
+  		\\
+  		\@date
+  \end{center}
   \end{center}
   \setcounter{page}{1}
 }
