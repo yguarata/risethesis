@@ -900,8 +900,9 @@ requirements for the degree of \@degree\ in \@majorfielden.
  }
 % 
 % %% bring the style into effect
+
  \pagestyle{fancy}
- \pagestyle{fancy}\renewcommand{\chaptermark}[1]{% 
+\renewcommand{\chaptermark}[1]{% 
 	\markboth{\MakeUppercase{% 
 			\ #1}}{}}
 % 
