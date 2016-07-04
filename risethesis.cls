@@ -400,11 +400,11 @@ requirements for the degree of \@degree\ in \@majorfielden.
 \newcommand{\MainChapterFormat}{
    \renewcommand{\chapnumfont}{%     % define font for chapter number
      \usefont{T1}{pnc}{b}{n}%      % choose New Chancery, bold, normal shape
-     \fontsize{100}{100}%          % font size 100pt, baselineskip 100pt
+    \fontsize{18}{100}%          % font size 100pt, baselineskip 100pt
      \selectfont%                  % activate font
    }
    
-   \colorlet{chapnumcol}{gray!75}  % color for chapter number
+   \colorlet{chapnumcol}{gray!85}  % color for chapter number
 
    \titleformat{\chapter}[display]
      {\bfseries}
@@ -863,7 +863,11 @@ requirements for the degree of \@degree\ in \@majorfielden.
  }
 % 
 % %% bring the style into effect
+
  \pagestyle{fancy}
+\renewcommand{\chaptermark}[1]{% 
+	\markboth{\MakeUppercase{% 
+			\ #1}}{}}
 % 
 % %% make the quotation appear next to the chapter number
 \renewcommand\chapterheadstartvskip{\vspace*{-5\baselineskip}}
